@@ -5,7 +5,6 @@ import {radioList} from "@/app/radio";
 export default function Home() {
     const [url, setUrl] = useState("");
 
-
     const audioRef = useRef<null | HTMLAudioElement>(null);
 
     useEffect(() => {
@@ -19,10 +18,10 @@ export default function Home() {
         audioRef.current.src = url;
         audioRef.current.play().catch(e => console.log(e));
     }, [url]);
+
     const handleClick = (e: any) => {
         setUrl(e.target.dataset.url)
     }
-
 
     return (
         <main>

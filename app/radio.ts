@@ -1,10 +1,10 @@
 export const radioList = [
-  { "name": "Record1",  "url": "http://radio-srv1.11one.ru/record192k.mp3"},
-  { "name": "Record2",  "url": "https://radiorecord.hostingradio.ru/rr_main96.aacp"},
+  { "name": "Record1",  "url": "https://radiorecord.hostingradio.ru/rr_main96.aacp"},
+  { "name": "Trancemission",  "url": "https://radiorecord.hostingradio.ru/tm96.aacp"},
   { "name": "Summer Dance",  "url": "https://radiorecord.hostingradio.ru/summerparty96.aacp"},
   { "name": "Organic",  "url": "https://radiorecord.hostingradio.ru/organic96.aacp"},
   { "name": "Ambient",  "url": "https://radiorecord.hostingradio.ru/ambient96.aacp"},
-  { "name": "Chill House",  "url": "http://radio-srv1.11one.ru/record192k.mp3"},
+  { "name": "Chill House",  "url": "https://radio-srv1.11one.ru/record192k.mp3"},
   { "name": "Lo-Fi",  "url": "https://radiorecord.hostingradio.ru/lofi96.aacp"},
   { "name": "Dream Pop",  "url": "https://radiorecord.hostingradio.ru/dreampop96.aacp"},
   { "name": "Innocence",  "url": "https://radiorecord.hostingradio.ru/ibiza96.aacp"},
@@ -16,12 +16,8 @@ export const radioList = [
   { "name": "Pirate Station",  "url": "https://radiorecord.hostingradio.ru/ps96.aacp"},
   { "name": "Маятник Фуко",  "url": "https://radiorecord.hostingradio.ru/mf96.aacp"},
   { "name": "Black Rap",  "url": "https://radiorecord.hostingradio.ru/yo96.aacp"},
-
 ]
 
-//Trancemission
-//https://radiorecord.hostingradio.ru/tm96.aacp
-//Megamix
 //https://radiorecord.hostingradio.ru/mix96.aacp
 //Record Gold
 //https://radiorecord.hostingradio.ru/gold96.aacp
