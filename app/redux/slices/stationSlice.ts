@@ -1,24 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export interface StationState {
-    stationState: boolean;
+    currentStation: {
+        id?: number,
+        name: string,
+        url: string
+    };
 }
 
 const initialState: StationState = {
-    stationState: false,
+    currentStation: {
+        name: "",
+        url: ""
+    },
 };
 
 export const stationSlice = createSlice({
     name: "station",
     initialState,
     reducers: {
-        setStationState(state, action) {
-            state.stationState = action.payload;
+        setCurrentStationIdState(state, action) {
+            state.currentStation.id = action.payload;
         },
     },
 
 });
 
-export const { setStationState } = stationSlice.actions;
+export const { setCurrentStationIdState } = stationSlice.actions;
 
 export default stationSlice.reducer;

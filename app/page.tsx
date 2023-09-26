@@ -1,26 +1,15 @@
 'use client'
-import React, {useEffect, useRef, useState} from "react";
 import {radioList} from "@/app/radio";
+import {useAppDispatch, useAppSelector} from "@/app/redux/hooks";
+import {setCurrentStationIdState} from "@/app/redux/slices/stationSlice";
 
 export default function Home() {
-    const [url, setUrl] = useState("");
+    const dispatch = useAppDispatch();
 
-    const audioRef = useRef<null | HTMLAudioElement>(null);
-
-    useEffect(() => {
-        audioRef.current = new Audio(url);
-    }, [])
-
-    useEffect(() => {
-        if(!audioRef.current){
-            return;
-        }
-        audioRef.current.src = url;
-        audioRef.current.play().catch(e => console.log(e));
-    }, [url]);
+    const currentStationId = useAppSelector((store) => store.stationReducer.currentStation.id)
 
     const handleClick = (e: any) => {
-        setUrl(e.target.dataset.url)
+        dispatch(setCurrentStationIdState(+e.target.dataset.id))
     }
 
     return (
@@ -31,11 +20,11 @@ export default function Home() {
                     <div
                         className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 xl:gap-x-8"
                         onClick={handleClick}>
-                        {radioList.map(({name, url}) => {
+                        {radioList.map(({name, id}) => {
                             return (
-                                <div key={url}
-                                     className="rounded-lg bg-gray-200 hover:bg-gray-400 h-20 w-36 text-center space-x-2 cursor-pointer"
-                                     data-url={url}
+                                <div key={id}
+                                     className={`rounded-lg ${currentStationId === id ? "bg-gray-400" : "bg-gray-200"} hover:bg-gray-400 h-20 w-36 text-center space-x-2 cursor-pointer`}
+                                     data-id={id}
                                 >
                                     {name}
                                 </div>
