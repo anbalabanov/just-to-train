@@ -1,7 +1,7 @@
 'use client'
 import {radioList} from "@/app/radio";
 import {useAppDispatch, useAppSelector} from "@/app/redux/hooks";
-import {setCurrentStationIdState} from "@/app/redux/slices/stationSlice";
+import {setCurrentStationIdState} from "@/app/redux/slices/station-slice";
 
 export default function Home() {
     const dispatch = useAppDispatch();
