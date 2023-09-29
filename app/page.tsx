@@ -14,11 +14,59 @@ export default function Home() {
 
     return (
         <main>
+            <div
+                className="h-screen inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] index_beams__yWcJT">
+                <div className="mb-10 mt-5 flex flex-wrap justify-start fixed">
 
-            <div className="absolute inset-0 bottom-10 bg-bottom bg-no-repeat bg-slate-50 dark:bg-[#0B1120] index_beams__yWcJT">
-                <div className="mt-20 font-medium py-1 px-2  rounded-full text-gray-700 bg-gray-100 border border-gray-300 ">
-                    <div className="text-xs font-normal leading-none max-w-full flex-initial">Hello!</div>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+                    <button
+                        className="mb-2 mr-2 rounded-2xl bg-gray-200 px-5 py-2.5 text-[12px] font-medium capitalize transition-all hover:bg-white hover:shadow-[0_2px_5px_0_rgba(0,0,0,0.25)] dark:bg-gray-700 dark:hover:bg-gray-600">
+                        Position
+                    </button>
+
+
                 </div>
+
+
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 
                     <div
