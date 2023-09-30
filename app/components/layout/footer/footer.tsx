@@ -1,7 +1,7 @@
 "use client"
 import {useAppSelector} from "@/app/redux/hooks";
 import {radioList} from "@/app/radio";
-import useAudio from "@/app/components/hooks/useAudio";
+import useAudio from "@/app/hooks/useAudio";
 
 function Footer() {
     const currentStationId = useAppSelector((store) => store.stationReducer.currentStation.id)
