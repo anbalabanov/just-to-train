@@ -5,6 +5,7 @@ export interface StationState {
     id?: number;
     name: string;
     url: string;
+    volume: number;
   };
 }
 
@@ -12,6 +13,7 @@ const initialState: StationState = {
   currentStation: {
     name: "",
     url: "",
+    volume: 50,
   },
 };
 
@@ -22,9 +24,17 @@ export const stationSlice = createSlice({
     setCurrentStationIdState(state, action) {
       state.currentStation.id = action.payload;
     },
+    setVolumeState(state, action) {
+      state.currentStation.volume = action.payload;
+    },
+    toggleMute(state) {
+      const { volume } = state.currentStation;
+      state.currentStation.volume = volume === 0 ? 50 : 0;
+    },
   },
 });
 
-export const { setCurrentStationIdState } = stationSlice.actions;
+export const { setCurrentStationIdState, setVolumeState, toggleMute } =
+  stationSlice.actions;
 
 export default stationSlice.reducer;

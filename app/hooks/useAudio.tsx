@@ -1,6 +1,10 @@
 import { useEffect, useState, useRef } from "react";
+import { useAppSelector } from "@/app/redux/hooks";
 
 const useAudio = (url: string) => {
+  const volume = useAppSelector(
+    (store) => store.stationReducer.currentStation.volume,
+  );
   const [playing, setPlaying] = useState(false);
 
   const audioRef = useRef<null | HTMLAudioElement>(null);
@@ -37,6 +41,12 @@ const useAudio = (url: string) => {
       audioRef.current?.removeEventListener("ended", () => setPlaying(false));
     };
   }, [audioRef]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume / 100;
+    }
+  }, [volume]);
 
   return { playing, toggle };
 };

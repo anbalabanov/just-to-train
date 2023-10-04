@@ -146,7 +146,8 @@ function Header() {
             </div>
             <button
               type="button"
-              className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden dark:text-slate-400 dark:hover:text-slate-300"
+              className="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600
+              lg:hidden dark:text-slate-400 dark:hover:text-slate-300"
             >
               <span className="sr-only">Search</span>
               <svg
