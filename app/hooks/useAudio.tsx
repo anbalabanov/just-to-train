@@ -6,6 +6,7 @@ const useAudio = (url: string) => {
     (store) => store.stationReducer.currentStation.volume,
   );
   const [playing, setPlaying] = useState(false);
+  const [mute, setMute] = useState(false);
 
   const audioRef = useRef<null | HTMLAudioElement>(null);
 
@@ -16,6 +17,13 @@ const useAudio = (url: string) => {
       !prev ? audioRef.current?.play() : audioRef.current?.pause();
       return !prev;
     });
+  };
+
+  const toggleMute = () => {
+    if (audioRef && audioRef.current) {
+      audioRef.current.muted = !mute;
+      setMute((prev) => !prev);
+    }
   };
 
   useEffect(() => {
@@ -48,7 +56,7 @@ const useAudio = (url: string) => {
     }
   }, [volume]);
 
-  return { playing, toggle };
+  return { playing, toggle, mute, toggleMute };
 };
 
 export default useAudio;

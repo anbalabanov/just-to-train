@@ -13,7 +13,7 @@ const initialState: StationState = {
   currentStation: {
     name: "",
     url: "",
-    volume: 50,
+    volume: 50, // save to localhost
   },
 };
 
@@ -27,14 +27,10 @@ export const stationSlice = createSlice({
     setVolumeState(state, action) {
       state.currentStation.volume = action.payload;
     },
-    toggleMute(state) {
-      const { volume } = state.currentStation;
-      state.currentStation.volume = volume === 0 ? 50 : 0;
-    },
   },
 });
 
-export const { setCurrentStationIdState, setVolumeState, toggleMute } =
+export const { setCurrentStationIdState, setVolumeState } =
   stationSlice.actions;
 
 export default stationSlice.reducer;
