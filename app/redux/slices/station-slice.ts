@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { radioList } from "@/app/radio";
 
 export interface StationState {
   currentStation: {
@@ -21,8 +22,12 @@ export const stationSlice = createSlice({
   name: "station",
   initialState,
   reducers: {
-    setCurrentStationIdState(state, action) {
-      state.currentStation.id = action.payload;
+    setCurrentStationIdState(state, { payload: id }) {
+      state.currentStation.id = id;
+      const { name = "", url = "" } =
+        radioList.find((station) => station.id === id) ?? {};
+      state.currentStation.name = name;
+      state.currentStation.url = url;
     },
     setVolumeState(state, action) {
       state.currentStation.volume = action.payload;

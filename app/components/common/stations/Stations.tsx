@@ -12,13 +12,14 @@ export const Stations = () => {
     useAppSelector((store) => store.stationReducer.currentStation.id) ?? 0;
 
   const handleClick = (e: any) => {
+    console.log(e.target);
     dispatch(setCurrentStationIdState(+e.target.dataset.id));
   };
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div className="container mx-auto px-16 py-16 ">
       <div
-        className="grid grid-cols-1 gap-x-2 gap-y-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 xl:gap-x-8"
+        className="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8"
         onClick={handleClick}
       >
         {radioList.map(({ id, name }) => (

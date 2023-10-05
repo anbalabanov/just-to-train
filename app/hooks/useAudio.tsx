@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useAppSelector } from "@/app/redux/hooks";
 
-const useAudio = (url: string) => {
+const useAudio = (url?: string) => {
   const volume = useAppSelector(
     (store) => store.stationReducer.currentStation.volume,
   );
