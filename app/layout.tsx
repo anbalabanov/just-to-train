@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} antialiased text-slate-500 dark:text-slate-400 
-        dark:bg-gradient-to-tl dark:from-sky-900 dark:via-neutral-500 dark:to-black
+      dark:bg-gradient-to-tr dark:from-indigo-900 dark:via-stone-700 dark:to-purple-900
         bg-gradient-to-bl from-green-200 via-transparent to-sky-200`}
       >
         <ReduxProvider>
