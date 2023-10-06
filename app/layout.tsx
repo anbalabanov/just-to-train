@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900`}
+        className={`${inter.className} antialiased text-slate-500 dark:text-slate-400 
+        dark:bg-gradient-to-tl dark:from-sky-900 dark:via-neutral-500 dark:to-black
+        bg-gradient-to-bl from-green-200 via-transparent to-sky-200`}
       >
         <ReduxProvider>
           <div className="flex flex-col min-h-screen">

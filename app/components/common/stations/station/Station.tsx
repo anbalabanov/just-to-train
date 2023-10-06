@@ -26,7 +26,7 @@ export const Station = ({ name, stationId, currentStationId }: Props) => {
         data-id={stationId}
       >
         <h5 className="flex items-center justify-center text-neutral-500 dark:text-neutral-300">
-          <span className="ml-2">{name}</span>
+          {name}
         </h5>
       </div>
     </div>
