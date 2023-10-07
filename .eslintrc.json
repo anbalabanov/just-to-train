@@ -1,7 +1,6 @@
 {
   "extends": ["next", "prettier", "next/core-web-vitals"],
   "rules": {
-    "max-len": ["warn,", { "code": 150 }]
-
+    "max-len": ["warn", { "code": 150 }]
   }
 }
