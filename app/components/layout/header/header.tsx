@@ -1,26 +1,17 @@
 "use client";
-import { useAppDispatch, useAppSelector } from "@/app/redux/hooks";
-import { toggleThemeMode } from "@/app/redux/slices/app-slice";
-import { useEffect } from "react";
+import { useTheme } from "next-themes";
 
 function Header() {
-  const dispatch = useAppDispatch();
-  const isDarkTheme = useAppSelector(
-    (state) => state.appReducer.app.isDarkTheme,
-  );
+  const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
-    if (isDarkTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkTheme]);
+  const handleThemeChange = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <header
       className="sticky top-0 z-40 w-full backdrop-blur
-    flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10
+    flex-none lg:z-50 lg:border-b lg:border-slate-900/10
     dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-slate-900/75"
     >
       <div className="max-w-8xl mx-auto">
@@ -80,7 +71,7 @@ function Header() {
                   Theme
                 </label>
                 <button
-                  onClick={() => dispatch(toggleThemeMode())}
+                  onClick={handleThemeChange}
                   type="button"
                   id="headlessui-listbox-button-:R19kcr6:"
                   aria-haspopup="true"
