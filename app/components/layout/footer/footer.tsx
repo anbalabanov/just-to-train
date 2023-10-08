@@ -13,7 +13,7 @@ function Footer() {
   const { playing, toggle, mute, toggleMute } = useAudio(url);
 
   return (
-    <footer className="fixed inset-x-0 bottom-0 bg-no-repeat dark:bg-slate-900/75">
+    <footer className="fixed inset-x-0 bottom-0 bg-no-repeat dark:bg-slate-900/75 border-t-2 border-indigo-500 backdrop-blur">
       <div className="shadow-lg rounded-lg">
         <div className="w-full p-6">
           <div className="grid grid-cols-3 items-center justify-end justify-items-center md:grid-cols-3 h-full">
