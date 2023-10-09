@@ -14,14 +14,14 @@ function Footer() {
   return (
     <footer className="fixed inset-x-0 bottom-0 bg-no-repeat dark:bg-slate-900/75 border-t-2 border-indigo-500 backdrop-blur">
       <div className="shadow-lg rounded-lg">
-        <div className="w-full p-6">
+        <div className="w-full p-1 sm:p-2 md:p-3 lg:p-4 xl:p-5">
           <div className="grid grid-cols-3 items-center justify-end justify-items-center md:grid-cols-3 h-full">
             <div className="hover:text-sky-500 dark:hover:text-sky-400">
-              <h3 className="text-2xl font-medium">{name}</h3>
-              <p className="text-sm mt-1">Other information</p>
+              <h3 className="text-l lg:text-2xl font-medium">{name}</h3>
+              <p className="text-xs lg:text-sm mt-1">Other information</p>
             </div>
             <div
-              className="p-8 rounded-full bg-red-light shadow-lg cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
+              className="p-4 md:p-6 lg:p-8 rounded-full bg-red-light shadow-lg cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
               onClick={toggle}
             >
               {playing ? (
