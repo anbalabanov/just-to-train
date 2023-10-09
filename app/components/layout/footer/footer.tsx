@@ -2,8 +2,7 @@
 import { useAppSelector } from "@/app/redux/hooks";
 import useAudio from "@/app/hooks/useAudio";
 import { Volume } from "@/app/components/elements/Volume";
-import { PlayIcon } from "@heroicons/react/24/outline";
-import { PauseIcon } from "@heroicons/react/24/outline";
+import { PauseIcon, PlayIcon } from "@heroicons/react/24/outline";
 
 function Footer() {
   const { name, url } = useAppSelector(
