@@ -23,8 +23,8 @@ function Header() {
                 World Radio Online
               </span>
             </a>
-            <div className="relative hidden lg:flex items-center ml-auto">
-              <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+            <div className="relative flex items-center ml-auto">
+              <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200 hidden sm:block">
                 <ul className="flex space-x-8">
                   <li>
                     <a
@@ -32,30 +32,6 @@ function Header() {
                       href="#"
                     >
                       Page 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                    >
-                      Page 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="#"
-                    >
-                      Page 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:text-sky-500 dark:hover:text-sky-400"
-                      href="#"
-                    >
-                      Page 4
                     </a>
                   </li>
                 </ul>

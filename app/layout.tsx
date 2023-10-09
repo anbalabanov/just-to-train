@@ -9,8 +9,8 @@ import { Providers } from "@/app/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "World Radio Ever",
-  description: "Just listen to the world radio ever",
+  title: "World Radio Online",
+  description: "Just listen to the world radio online",
 };
 
 export default function RootLayout({
