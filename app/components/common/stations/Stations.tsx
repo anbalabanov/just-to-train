@@ -11,9 +11,22 @@ export const Stations = () => {
   const currentStationId =
     useAppSelector((store) => store.stationReducer.currentStation.id) ?? 0;
 
-  const handleClick = (e: any) => {
-    console.log(e.target);
-    dispatch(setCurrentStationIdState(+e.target.dataset.id));
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (!(e.target instanceof HTMLElement)) {
+      return;
+    }
+
+    const parent = e.target.parentNode;
+
+    if (!parent || !(parent instanceof HTMLElement)) {
+      return;
+    }
+
+    const id = parent.dataset.id;
+
+    if (id) {
+      dispatch(setCurrentStationIdState(+id));
+    }
   };
 
   return (
@@ -24,6 +37,7 @@ export const Stations = () => {
       >
         {radioList.map(({ id, name }) => (
           <Station
+            data-id={id}
             key={name}
             name={name}
             stationId={id}
