@@ -1,21 +1,28 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+    extend: {},
+    keyframes: {
+      upDown: {
+        "0%": { height: "0" },
+        "100%": { height: "25px" },
       },
+    },
+    animation: {
+      upDown1: "upDown 0.7s infinite alternate",
+      upDown2: "upDown 0.6s infinite alternate",
+      upDown3: "upDown 0.9s infinite alternate",
+      upDown4: "upDown 0.3s infinite alternate",
+      upDown5: "upDown 0.4s infinite alternate",
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

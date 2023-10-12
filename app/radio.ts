@@ -1,7 +1,7 @@
 export const radioList = [
   {
     id: 10000,
-    name: "Record1",
+    name: "Record",
     url: "https://radiorecord.hostingradio.ru/rr_main96.aacp",
   },
   {
