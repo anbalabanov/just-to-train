@@ -5,9 +5,7 @@ import { UserIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 function Header() {
   const { theme, setTheme } = useTheme();
 
-  const handleThemeChange = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const handleThemeChange = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <header

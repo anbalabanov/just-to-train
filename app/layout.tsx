@@ -5,6 +5,7 @@ import Header from "@/app/components/layout/header/header";
 import Footer from "@/app/components/layout/footer/footer";
 import { ReduxProvider } from "@/app/redux/provider";
 import { Providers } from "@/app/providers";
+import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,11 +14,7 @@ export const metadata: Metadata = {
   description: "Just listen to the world radio online",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
