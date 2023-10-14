@@ -1,6 +1,11 @@
 "use client";
 import { useTheme } from "next-themes";
-import { UserIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import {
+  UserIcon,
+  MoonIcon,
+  SunIcon,
+  MusicalNoteIcon,
+} from "@heroicons/react/24/outline";
 
 function Header() {
   const { theme, setTheme } = useTheme();
@@ -16,10 +21,12 @@ function Header() {
       <div className="max-w-8xl mx-auto">
         <div className="py-4 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0">
           <div className="relative flex items-center text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-            <a className="mr-3 flex-none overflow-hidden w-auto" href="/">
-              <span className="hover:text-sky-500 dark:hover:text-sky-400">
-                World Radio Online
-              </span>
+            <a
+              className="flex hover:text-sky-500 dark:hover:text-sky-400"
+              href="/"
+            >
+              <MusicalNoteIcon className="w-6 h-6 mr-2" />
+              <span className="">World Radio Online</span>
             </a>
             <div className="relative flex items-center ml-auto">
               <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200 hidden sm:block">
@@ -29,7 +36,23 @@ function Header() {
                       className="hover:text-sky-500 dark:hover:text-sky-400"
                       href="#"
                     >
-                      Page 1
+                      Podcasts
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      href="#"
+                    >
+                      Radio List
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="hover:text-sky-500 dark:hover:text-sky-400"
+                      href="#"
+                    >
+                      About
                     </a>
                   </li>
                 </ul>
