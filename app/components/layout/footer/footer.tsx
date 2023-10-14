@@ -43,7 +43,9 @@ function Footer() {
               {getPlayIcon()}
             </div>
             <div className="hover:text-sky-500 dark:hover:text-sky-400 flex">
-              <Volume mute={mute} toggleMute={toggleMute} />
+              <div className="hidden sm:block">
+                <Volume mute={mute} toggleMute={toggleMute} />
+              </div>
               <Equalizer playing={playing && !loading} />
             </div>
           </div>
