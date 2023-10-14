@@ -10,6 +10,22 @@ const useAudio = (url?: string) => {
 
   const audioRef = useRef<null | HTMLAudioElement>(null);
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      const handleCanPlay = () => {
+        setLoading(false);
+      };
+
+      audioRef.current.addEventListener("canplay", handleCanPlay);
+
+      return () => {
+        audioRef.current?.removeEventListener("canplay", handleCanPlay);
+      };
+    }
+  }, []);
+
   const toggle = () => {
     if (!url) return;
 
@@ -32,6 +48,8 @@ const useAudio = (url?: string) => {
     }
 
     if (!url) return;
+
+    setLoading(true);
 
     audioRef.current.src = url;
     audioRef.current.play().catch((e) => console.log(e)); // TODO: Warning
@@ -56,7 +74,7 @@ const useAudio = (url?: string) => {
     }
   }, [volume]);
 
-  return { playing, toggle, mute, toggleMute };
+  return { loading, playing, toggle, mute, toggleMute };
 };
 
 export default useAudio;

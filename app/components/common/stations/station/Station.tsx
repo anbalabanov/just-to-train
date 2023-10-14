@@ -13,7 +13,7 @@ export const Station = ({ name, stationId, currentStationId }: Props) => {
       data-id={stationId}
       className={`block rounded-lg shadow-2xl text-center transition duration-600 ease-in-out  ${
         currentStationId === stationId
-          ? "bg-indigo-300 dark:bg-indigo-800"
+          ? "bg-indigo-300 dark:bg-indigo-800 hover:bg-indigo-100 hover:dark:bg-indigo-700"
           : "bg-white dark:bg-slate-800 hover:bg-indigo-100 hover:dark:bg-indigo-700"
       } cursor-pointer`}
     >

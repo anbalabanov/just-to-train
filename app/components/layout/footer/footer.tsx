@@ -4,13 +4,26 @@ import useAudio from "@/app/hooks/useAudio";
 import { Volume } from "@/app/components/elements/Volume";
 import { PauseIcon, PlayIcon } from "@heroicons/react/24/outline";
 import { Equalizer } from "@/app/components/common/equalizer/Equalizer";
+import Spinner from "@/app/components/layout/footer/spinner/Spinner";
 
 function Footer() {
   const { name, url } = useAppSelector(
     (store) => store.stationReducer.currentStation,
   );
 
-  const { playing, toggle, mute, toggleMute } = useAudio(url);
+  const { loading, playing, toggle, mute, toggleMute } = useAudio(url);
+
+  const getPlayIcon = () => {
+    if (loading) {
+      return <Spinner />;
+    }
+
+    return playing ? (
+      <PauseIcon className="w-6 h-6" />
+    ) : (
+      <PlayIcon className="w-6 h-6" />
+    );
+  };
 
   return (
     <footer className="fixed inset-x-0 bottom-0 bg-no-repeat dark:bg-slate-900/75 border-t border-slate-900/10 backdrop-blur">
@@ -27,15 +40,11 @@ function Footer() {
               className="p-4 md:p-6 lg:p-8 rounded-full bg-red-light shadow-lg cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
               onClick={toggle}
             >
-              {playing ? (
-                <PauseIcon className="w-6 h-6" />
-              ) : (
-                <PlayIcon className="w-6 h-6" />
-              )}
+              {getPlayIcon()}
             </div>
             <div className="hover:text-sky-500 dark:hover:text-sky-400 flex">
               <Volume mute={mute} toggleMute={toggleMute} />
-              <Equalizer playing={playing} />
+              <Equalizer playing={playing && !loading} />
             </div>
           </div>
         </div>
