@@ -57,7 +57,7 @@ const useAudio = (url?: string) => {
 
     return () => {
       audioRef.current?.pause();
-      setLoading(true);
+      setLoading(false);
       setPlaying(false);
     };
   }, [url]);
