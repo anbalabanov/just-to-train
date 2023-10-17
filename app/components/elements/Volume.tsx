@@ -22,7 +22,7 @@ export const Volume = ({ toggleMute, mute }: any) => {
   };
 
   return (
-    <div className="flex items-center space-x-3">
+    <div className="flex items-center mr-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
