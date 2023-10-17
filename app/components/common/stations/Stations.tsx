@@ -30,7 +30,7 @@ export const Stations = () => {
   };
 
   return (
-    <div className="container mx-auto px-16 py-16 ">
+    <div className="container mx-auto px-16 pt-16 pb-20 sm:pb-24 md:pb-32 lg:pb-36 xl:pb-40 2xl:pb-44">
       <div
         className="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8"
         onClick={handleClick}
