@@ -11,10 +11,10 @@ export const Station = ({ name, stationId, currentStationId }: Props) => {
   return (
     <section
       data-id={stationId}
-      className={`block rounded-lg shadow-2xl text-center transition duration-600 ease-in-out  ${
+      className={`block rounded-lg shadow-2xl hover:shadow-sky-400 text-center transition duration-600 ease-in-out  ${
         currentStationId === stationId
-          ? "bg-indigo-300 dark:bg-indigo-800 hover:bg-indigo-100 hover:dark:bg-indigo-700"
-          : "bg-white dark:bg-slate-800 hover:bg-indigo-100 hover:dark:bg-indigo-700"
+          ? "bg-sky-200 dark:bg-indigo-800 hover:bg-sky-100 hover:dark:bg-indigo-700 shadow-sky-400"
+          : "bg-white dark:bg-slate-800 hover:bg-sky-100 hover:dark:bg-indigo-700"
       } cursor-pointer`}
     >
       <div className="p-6">LOGO</div>
