@@ -37,7 +37,9 @@ function Footer() {
               </p>
             </div>
             <div
-              className="p-4 md:p-6 lg:p-8 rounded-full bg-red-light shadow-lg cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
+              className="p-4 md:p-6 lg:p-8 rounded-full shadow-lg shadow-sky-300 dark:shadow-sky-800
+               hover:shadow-sky-400 dark:hover:shadow-sky-600 cursor-pointer hover:text-sky-500
+               dark:hover:text-sky-400 border-2 border-sky-200 dark:border-sky-800"
               onClick={toggle}
             >
               {getPlayIcon()}

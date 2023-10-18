@@ -9,7 +9,7 @@ type Props = {
 
 export const Station = ({ name, stationId, currentStationId }: Props) => {
   return (
-    <div
+    <section
       data-id={stationId}
       className={`block rounded-lg shadow-2xl text-center transition duration-600 ease-in-out  ${
         currentStationId === stationId
@@ -25,6 +25,6 @@ export const Station = ({ name, stationId, currentStationId }: Props) => {
       >
         {name}
       </div>
-    </div>
+    </section>
   );
 };
